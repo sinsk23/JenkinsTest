@@ -1,8 +1,9 @@
 #!/bin/sh
-ssh ubuntu@3.35.8.87<<EOF
+ssh ubuntu@ip-172-31-44-105<<EOF
 sudo -s
 git pull origin main
 npm install
+npm install -g pm2
 pm2 restart app.js
 exit
 EOF
