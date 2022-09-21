@@ -3,8 +3,14 @@ const http = require("http");
 const app = express();
 const PORT = process.env.PORT || 3666;
 const HOST = process.env.HOST || 'localhost';
-
-
+const cors = require('cors');
+   
+app.use(
+    cors({
+      origin: true, // 출처 허용 옵션
+      withCredentials: true, // 사용자 인증이 필요한 리소스(쿠키 ..등) 접근
+    })
+  );
 app.use(express.json());
 app.set('view engine', 'ejs');
 app.set('views', './views');
