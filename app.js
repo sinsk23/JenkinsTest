@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 app.get("/", (req, res) => {
-    res.send("Hello Jenkins!!");
+    // res.send("Hello Jenkins!!");
     res.render('index',{
       title: 'Hi Node Web Server!'
     });
