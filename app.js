@@ -27,7 +27,7 @@ app.get("/api",(req,res)=> {
 });
 
 http.createServer(app).listen(PORT, () => {
-    console.log(`서버가  :${PORT}로 켜짐`);
+    console.log(`서버가  :${PORT}로 켜졌습니다`);
 });
 // http.createServer(app).listen(PORT,HOST, () => {
 //   console.log(`서버가  ${HOST}:${PORT}로 켜짐`);
