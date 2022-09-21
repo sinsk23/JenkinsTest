@@ -2,10 +2,10 @@
   "name": "jenkinstest",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  
   "scripts": {
     "test": "./node_modules/.bin/mocha ./test/test --exit",
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
