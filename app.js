@@ -6,9 +6,14 @@ const HOST = process.env.HOST || 'localhost';
 
 
 app.use(express.json());
+app.set('view engine', 'ejs');
+app.set('views', './views');
 
 app.get("/", (req, res) => {
     res.send("Hello Jenkins!!");
+    res.render('index',{
+      title: 'Hi Node Web Server!'
+    });
   });
 
 http.createServer(app).listen(PORT,HOST, () => {
