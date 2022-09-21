@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
   });
 
 http.createServer(app).listen(PORT,HOST, () => {
-    console.log(`Server Listening on ${HOST}:${PORT}`);
+    console.log(`서버가  ${HOST}:${PORT}로 켜짐`);
 });
 
 module.exports = app;
