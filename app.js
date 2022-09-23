@@ -1,7 +1,8 @@
+require('dotenv').config();
 const express = require('express');
 const http = require("http");
 const app = express();
-const PORT = process.env.PORT || 3666;
+const PORT = process.env.PORT ;
 const HOST = process.env.HOST || 'localhost';
 const cors = require('cors');
    
