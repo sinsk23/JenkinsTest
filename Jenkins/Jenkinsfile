@@ -20,7 +20,7 @@ pipeline {
             steps{
                 script{
                     try{
-                        sh ' zipfile= beanstalk_v \
+                        sh ' zipfile= JenkinsTest \
                         dir = directory \
                         zip -r beanstalk_v${BUILD_NUMBER}.zip'
                     } catch(error){
