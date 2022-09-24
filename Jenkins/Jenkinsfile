@@ -51,7 +51,7 @@ pipeline {
                         --version-label beanstalk_v${BUILD_NUMBER} \
                         --source-bundle S3Bucket="s3pipelinebucket",S3Key="JenkinsToEB/beanstalk_v${BUILD_NUMBER}.zip"'
                         sh 'aws elasticbeanstalk update-environment --region ap-northeast-1 \
-                        --environment-name JenkinsToEB-env \
+                        --environment-name Jenkinstoeb-env \
                         --version-label beanstalk_v${BUILD_NUMBER}'
                     } catch(error){
                         print(error)
