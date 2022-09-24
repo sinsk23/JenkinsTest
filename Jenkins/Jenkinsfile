@@ -1,7 +1,7 @@
 
 pipeline {
     agent any
-    chmod +x Jenkins/Jenkinsfile
+    
     stages {
         stage('delete origin zip file'){
             steps{
@@ -20,7 +20,7 @@ pipeline {
             steps{
                 script{
                     try{
-                        sh 'zip -r beanstalk_v${BUILD_NUMBER}.zip'
+                        sh 'zip -r JenkinsTest${BUILD_NUMBER}.zip'
                     } catch(error){
                         print(error)
                         env.cloneResult = false
