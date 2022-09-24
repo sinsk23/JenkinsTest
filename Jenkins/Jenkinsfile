@@ -20,9 +20,8 @@ pipeline {
             steps{
                 script{
                     try{
-                        sh ' zipfile= JenkinsTest \
-                        dir = directory \
-                        zip -r beanstalk_v${BUILD_NUMBER}.zip'
+                        sh 'node --version'
+                        sh 'zip -r beanstalk_v${BUILD_NUMBER}.zip '
                     } catch(error){
                         print(error)
                         env.cloneResult = false
