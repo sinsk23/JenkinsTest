@@ -1,11 +1,13 @@
+
 pipeline {
     agent any
+    chmod +x Jenkins/Jenkinsfile
     stages {
         stage('delete origin zip file'){
             steps{
                 script{
                     try{
-                        sh 'rm -rf *.zip'
+                        sh 'rm -rf *.zip' 
                     } catch(error){
                         print(error)
                         env.cloneResult = false
