@@ -7,7 +7,7 @@ pipeline {
             steps{
                 script{
                     try{
-                        bat 'rm -rf *.zip' 
+                        sh 'rm -rf *.zip' 
                     } catch(error){
                         print(error)
                         env.cloneResult = false
@@ -21,7 +21,7 @@ pipeline {
                 script{
                     try{
                         
-                        bat 'zip -r beanstalk_v${BUILD_NUMBER}.zip '
+                        sh 'zip -r beanstalk_v${BUILD_NUMBER}.zip'
                     } catch(error){
                         print(error)
                         env.cloneResult = false
