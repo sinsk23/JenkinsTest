@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('delete origin zip file') {
       steps {
-        sh 'rm -rf *.zip'
+        sh '\'rm -rf *.zip\''
       }
     }
 
