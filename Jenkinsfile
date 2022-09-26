@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('upload to S3') {
+      steps {
+        sh 'echo \'upload\''
+      }
+    }
+
   }
 }
