@@ -3,6 +3,20 @@ pipeline {
     agent any
     
     stages {
+        stage('Git Clone') {
+            steps {
+                script {
+                    try {
+                        git url: "https://github.com/sinsk23/JenkinsTest.git", branch: "main" 
+                        sh "sudo rm -rf ./.git"
+                        env.cloneResult=true
+                    } catch (error) {
+                        print(error)
+                        env.cloneResult=false
+                        currentBuild.result='FAILURE'
+                    }
+                } 
+            }
         stage('delete origin zip file'){
             steps{
                 script{
