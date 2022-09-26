@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('delete origin zip file') {
       steps {
-        sh 'sh \'delete some\''
+        sh 'echo \'delete some\''
       }
     }
 
