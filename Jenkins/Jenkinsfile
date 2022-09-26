@@ -7,7 +7,7 @@ pipeline {
             steps{
                 script{
                     try{
-                        sh 'rm -rf *.zip' 
+                        sh'rm -rf *.zip' 
                     } catch(error){
                         print(error)
                         env.cloneResult = false
@@ -21,7 +21,7 @@ pipeline {
                 script{
                     try{
                         
-                        sh 'zip -r beanstalk_v${BUILD_NUMBER}.zip'
+                        sh'zip -r beanstalk_v${BUILD_NUMBER}.zip'
                     } catch(error){
                         print(error)
                         env.cloneResult = false
@@ -34,9 +34,9 @@ pipeline {
             steps{
                 script{
                     try{
-                        sh 'aws s3 cp beanstalk_v${BUILD_NUMBER}.zip \
+                        sh'aws s3 cp beanstalk_v${BUILD_NUMBER}.zip \
                         s3://s3pipelinebucket/s3tutorial/beanstalk_v${BUILD_NUMBER}.zip \
-                        --region ap-northeast-2'   
+                        --region ap-northeast-2'
                     } catch(error){
                         print(error)
                         env.cloneResult = false
