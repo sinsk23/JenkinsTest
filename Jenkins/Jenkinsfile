@@ -34,7 +34,7 @@ pipeline {
             steps{
                 script{
                     try{
-                        aws s3 'cp beanstalk_v${BUILD_NUMBER}.zip \
+                        sh 'aws s3 cp beanstalk_v${BUILD_NUMBER}.zip \
                         s3://s3pipelinebucket/s3tutorial/beanstalk_v${BUILD_NUMBER}.zip \
                         --region ap-northeast-2'   
                     } catch(error){
