@@ -21,7 +21,7 @@ pipeline {
                 script{
                     try{
                         
-                        sh 'zip -r beanstalk_v${BUILD_NUMBER}.zip'
+                        zip 'beanstalk_v${BUILD_NUMBER}.zip'
                     } catch(error){
                         print(error)
                         env.cloneResult = false
