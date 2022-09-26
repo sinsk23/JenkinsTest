@@ -17,6 +17,7 @@ pipeline {
                     }
                 } 
             }
+        }
         stage('delete origin zip file'){
             steps{
                 script{
@@ -77,6 +78,5 @@ pipeline {
                 }
             }
         }        
-    }
     }
 }
