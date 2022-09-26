@@ -20,7 +20,6 @@ pipeline {
             steps{
                 script{
                     try{
-                        cd 'workspace'
                         sh'zip -r "Weekly Run"${BUILD_NUMBER}.zip'
                     } catch(error){
                         print(error)
