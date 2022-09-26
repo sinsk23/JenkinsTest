@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('make zip file') {
+      steps {
+        zip 'beanstalk_v${BUILD_NUMBER}.zip'
+      }
+    }
+
   }
 }
