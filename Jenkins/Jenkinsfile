@@ -22,7 +22,7 @@ pipeline {
                 script{
                     try{
                         String currentDirectory = pwd()
-                        sh 'zip -r JenkinsTest${BUILD_NUMBER}.zip JenkinsTest'
+                        sh 'zip JenkinsTest${BUILD_NUMBER}.zip JenkinsTest'
                     } catch(error){
                         print(error)
                         env.cloneResult = false
