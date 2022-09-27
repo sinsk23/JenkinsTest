@@ -22,7 +22,7 @@ pipeline {
                 script{
                     try{
                         String currentDirectory = pwd()
-                        sh 'zip -r beanstalk_v${BUILD_NUMBER}.zip JenkinsTest'
+                        sh 'zip -r JenkinsTest${BUILD_NUMBER}.zip JenkinsTest'
                     } catch(error){
                         print(error)
                         env.cloneResult = false
