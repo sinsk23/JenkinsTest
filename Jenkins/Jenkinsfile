@@ -8,6 +8,7 @@ pipeline {
             steps{
                 script{
                     try{
+                        sh 'apt-get install zip' 
                         sh'rm -rf *.zip' 
                     } catch(error){
                         print(error)
